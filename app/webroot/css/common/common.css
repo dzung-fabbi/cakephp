@@ -1,0 +1,667 @@
+@charset "utf-8";
+html {
+	height:100%;
+	margin: -8px;
+}
+
+body {
+	height:100%;
+	overflow:hidden;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table thead tr th{
+	padding: 5px;
+	word-wrap: break-word;
+	border: #cdcdcd 1px solid;
+}
+
+table tfoot tr th{
+	padding: 5px;
+	word-wrap: break-word;
+	border: #cdcdcd 1px solid;
+}
+/*
+#right_content ::-webkit-scrollbar { width: 3px; height: 3px;}
+#right_content ::-webkit-scrollbar-button {  background-color: #3a4652; }
+#right_content ::-webkit-scrollbar-track {  background-color: #999;}
+#right_content ::-webkit-scrollbar-track-piece { background-color: #ffffff;}
+#right_content ::-webkit-scrollbar-thumb { height: 50px; background-color: #3a4652; border-radius: 3px;}
+#right_content ::-webkit-scrollbar-corner { background-color: #999;}}
+#right_content ::-webkit-resizer { background-color: #3a4652;}
+*/
+.wrap {
+	/*width: 1000px;*/
+	margin-top: 10px;
+	margin-left: 18px;
+	font-size: 13px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrap table {
+	/*width: 1000px;*/
+	table-layout: fixed;
+}
+
+.inner_table {
+	width: 1000px;
+	overflow-y: auto;
+	overflow-x: hidden;
+	font-size: 13px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	word-wrap: break-word;
+}
+
+.inner_table td {
+	padding-left: 10px;
+	border: #cdcdcd 1px solid;
+	padding-top: 5px;
+}
+
+.head {
+	color: #000;
+	background-color: rgb(97,107,117);
+	text-align: center;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color:#FFFFFF;
+}
+
+#div_container {
+	float: left;
+	/*width: 1090px;*/
+	width: 1141px;
+	margin: auto;
+	margin-left:20px;
+}
+
+.div_box {
+	height: 599px;
+	/*width: 1000px;*/
+	border-image: none;
+	margin-top: 50px;
+}
+
+.div_box_long {
+	height: 599px;
+	width: 1090px;
+	border-image: none;
+}
+
+#wrapper {
+	min-height:100%;
+	position:relative;
+}
+
+#content {
+	background-color:#f2f2f2;
+	width: 100%;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #000;
+
+}
+
+.textDefault {
+	font-size: 13px;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+#menu_footer {
+	background-color: #3a4652;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 10px;
+	text-align: center;
+	border-top: 5px solid #53c8ef;
+	clear: both;
+	width: 225px;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	padding: 10px 0;
+	color: #B4B3B4;
+}
+
+.input_box{
+	padding: 5px 10px;
+	border-radius: 7px;
+	border: none;
+	border-image: none;
+	font-size: 13px;
+	background-color: rgb(208,224,239);
+	width:300px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.user_input_box{
+	height:25px;
+	width:229px;
+	margin-top: 13px;
+	margin-bottom: 5px;
+	border:#a9a9a9 1px solid;
+	-moz-box-shadow: inset 0 0 5px rgba(0,0,0,0.2),0 0 2px rgba(0,0,0,0.3);
+	-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2),0 0 2px rgba(0,0,0,0.3);
+	padding:0 3px;
+	cursor:pointer;
+	color:#333;
+	font-weight:bold;
+	background:#d0e0ef;
+	text-shadow:1px 1px 0px #fff;
+}
+
+.input_box_new {
+	padding: 5px 10px;
+	border-radius: 7px;
+	border: none;
+	border-image: none;
+	font-size: 13px;
+	background-color: rgb(208,224,239);
+	width: 250px;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.error {
+	color: red;
+	vertical-align:middle;
+}
+
+.green_buttons a{
+	background: #53c8ef;
+	background-image: -webkit-linear-gradient(top, #53c8ef, #53c8ef);
+	background-image: -moz-linear-gradient(top, #53c8ef, #53c8ef);
+	background-image: -ms-linear-gradient(top, #53c8ef, #53c8ef);
+	background-image: -o-linear-gradient(top, #53c8ef, #53c8ef);
+	background-image: linear-gradient(to bottom, #53c8ef, #53c8ef);
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #fff !important;
+	font-size: 15px;
+	padding: 5px 30px 5px 30px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.green_buttons a:hover{
+	background: #87d9f4;
+	background-image: -webkit-linear-gradient(top, #87d9f4, #87d9f4);
+	background-image: -moz-linear-gradient(top, #87d9f4, #87d9f4);
+	background-image: -ms-linear-gradient(top, #87d9f4, #87d9f4);
+	background-image: -o-linear-gradient(top, #87d9f4, #87d9f4);
+	background-image: linear-gradient(to bottom, #87d9f4, #87d9f4);
+	text-decoration: none;
+	text-shadow: 1px 1px 3px #666666;
+}
+
+.green_buttons a.disabled-link{
+	pointer-events: none;
+    background: #D2D2D2;
+    color: #DBE6E2 !important;
+}
+
+.gray_buttons a{
+	background: #A1A1A1;
+	background-image: -webkit-linear-gradient(top, #A1A1A1, #A1A1A1);
+	background-image: -moz-linear-gradient(top, #A1A1A1, #A1A1A1);
+	background-image: -ms-linear-gradient(top, #A1A1A1, #A1A1A1);
+	background-image: -o-linear-gradient(top, #A1A1A1, #A1A1A1);
+	background-image: linear-gradient(to bottom, #A1A1A1, #A1A1A1);
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #fff !important;
+	font-size: 15px;
+	padding: 5px 30px 5px 30px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.gray_buttons a:hover{
+	background: #bfbfbf;
+	background-image: -webkit-linear-gradient(top, #bfbfbf, #bfbfbf);
+	background-image: -moz-linear-gradient(top, #bfbfbf, #bfbfbf);
+	background-image: -ms-linear-gradient(top, #bfbfbf, #bfbfbf);
+	background-image: -o-linear-gradient(top, #bfbfbf, #bfbfbf);
+	background-image: linear-gradient(to bottom, #bfbfbf, #bfbfbf);
+	text-decoration: none;
+	text-shadow: 1px 1px 3px #666666;
+}
+
+.gray_buttons a.disabled-link{
+	pointer-events: none;
+    background: #D2D2D2;
+    color: #DBE6E2 !important;
+}
+
+.err_msg {
+	color: red;
+	text-align: left;
+    font-size: 11px;
+    height: 25px;
+}
+
+.input_err_msg {
+    margin-left: 218px;
+}
+
+.flash_msg {
+    text-align: left;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.success {
+	color: #0808FD;
+}
+
+.err_msg_new_180 {
+	height: 11px;
+	margin-left: 180px;
+	margin-top: 2px;
+}
+.block-loading-span {
+	float: right;
+	margin-left:-112px;
+	margin-right:112px;
+	margin-top:12px;
+	font-size: 13px;
+}
+
+.tbllimit {
+	text-align: right;
+	color: #e30033;
+	margin-right: 30px;
+}
+
+.margleft_10 {
+	margin-left: 10px;
+}
+
+.margleft_20 {
+	margin-left: 20px;
+}
+
+.margleft_40 {
+	margin-left: 40px;
+}
+
+.margleft_80 {
+	margin-left: 80px;
+}
+
+.margtop_10 {
+	margin-top: 10px;
+}
+
+.margtop_20 {
+	margin-top: 20px;
+}
+
+.margbottom_10 {
+	margin-bottom: 10px;
+}
+
+.margbottom_20 {
+	margin-bottom: 20px;
+}
+
+.margbottom_30 {
+	margin-bottom: 30px;
+}
+
+.margbottom_40 {
+	margin-bottom: 40px;
+}
+
+.margbottom_50 {
+	margin-bottom: 50px;
+}
+
+.paddingleft_10 {
+	padding-left: 10px;
+}
+
+.paddingleft_20 {
+	padding-left: 20px;
+}
+
+.box_spacer {
+	height:15px;
+}
+
+.box_spacer_4 {
+	height:4px;
+}
+
+.box_spacer_5 {
+	height:5px;
+}
+
+.box_spacer_6 {
+	height:6px;
+}
+
+.box_spacer_16 {
+	height:16px;
+}
+
+.box_spacer_20 {
+	height:20px;
+}
+
+.algin_center {
+	text-align: center;
+}
+
+.cust_err {
+	font-size: 11px;
+	margin-top: 2px;
+}
+
+.fldformat {
+	height: 30px;
+	width: 780px;
+	margin-left: 60px;
+}
+
+.fileUpload {
+	height: 30px;
+	width: 780px;
+	margin-left: 60px;
+}
+
+.fldformat_20 {
+	height: 30px;
+	width: 780px;
+	margin-left: 20px;
+}
+
+.lblformat {
+	width: 120px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+.lblformat_150 {
+	width: 150px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+.lblformat_200 {
+	width: 200px;
+	float: left;
+	text-align: right;
+	margin-right: 20px;
+	font-weight: bold;
+	margin-top: 2px;
+}
+
+.lblBold16{
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.margleft_40{
+	margin-left:40px;
+}
+
+.uploadlbl {
+	font-size: 13px;
+	color: #e30033;
+	margin-top: -10px;
+	margin-right: 150px;
+	float: right;
+}
+
+.caution {
+	font-size: 13px;
+	color: #e30033;
+	margin-top: 10px;
+	margin-bottom: 20px;
+	margin-left: 84px;
+	float: left;
+}
+
+.select_270 {
+	width:270px;
+}
+
+.float_left {
+	float: left;
+}
+
+.margin_left_10 {
+	margin-left: 10px
+}
+
+.calender-wrapper {
+  width: 1230px;
+  padding-right: 60px;
+}
+.l-calender {
+  width: 1230px;
+}
+.header-year {
+  width: 280px;
+  margin: 0 auto 40px auto;
+}
+.header-year p {
+  float: left;
+  font-size: 24px;
+  font-weight: bold;
+}
+.header-year input {
+  width: 32px;
+  height: 35px;
+  background-color: rgb(115,133,151);
+  color: #fff;
+  border: none;
+  border-radius: 2px;
+}
+.header-year .year {
+  margin: 0 41px 30px 41px;
+}
+.ui-datepicker-multi .ui-datepicker-group table {
+  height: 231px !important;
+  overflow: hidden;
+}
+.ui-datepicker-multi .ui-datepicker-group {
+    width: 210px !important;
+	padding: 1px;
+	padding-left: 2px;
+	padding-right: 2px;
+	margin-left: 1px;
+	border: 1px solid rgb(227, 219, 203)
+}
+.mcal { border: inset 1px; float:left; font-size:smaller }
+.mcal td,th { width: 2em; text-align:right }
+.ycal  { border: dotted 1px; font-size:smaller }
+.ycal td,th { width: 2em; text-align:right }
+.sun { background-color:#ffcccc }
+.sat { background-color:#ccccff }
+.mark {
+	display: inline-block;
+	width: 11px;
+	height: 11px;
+	margin-right: 8px;
+	margin-left: 10px;
+}
+.calendar_indicator {
+	font-size: 18px;
+	margin-bottom: 50px;
+	margin-left: 60px;
+}
+
+.header_pink {
+	padding: 6px;
+	text-align: center;
+	color: white;
+	background-color: rgb(243, 159, 150);
+	width: 985px;
+	font-size: 15px;
+}
+
+#setupTab ul {
+	background:none;
+}
+
+#tabs ul {
+	background:none;
+}
+
+#ui-datepicker-div {
+	border: 1px solid rgb(115,133,151);
+}
+
+/*popup formats*/
+.popup_fldformat {
+	height: 30px;
+	width: 500px;
+	margin-left: 60px;
+}
+
+.popup_lbl {
+	font-weight: bold;
+	font-size: 18px;
+}
+
+.popup_lblBold16 {
+	font-weight: bold;
+	font-size: 16px;
+	margin-left: 60px;
+}
+
+.popup_lblformat {
+	width: 150px;
+	float: left;
+	margin-left: 60px;
+	margin-right: -60px;
+	font-weight: bold;
+	margin-top: 5px;
+	text-align: right;
+}
+
+.popup_input_box {
+	padding: 5px 10px;
+	border-radius: 7px;
+	border: none;
+	border-image: none;
+	font-size: 13px;
+	background-color: rgb(115,133,151);
+	width: 150px;
+}
+
+.disabled_class {
+	background-color: #cdcdcd !important;
+}
+
+.popup_input_box_small {
+	padding: 5px 10px;
+	border-radius: 7px;
+	border: none;
+	border-image: none;
+	font-size: 13px;
+	background-color: rgb(115,133,151);
+	width: 60px;
+}
+
+.formPopup {
+	padding: 20px;
+	padding-right: 0px;
+	padding-left: 10px;
+}
+
+.popup_hd_center {
+	text-align: center;
+	border: #cdcdcd 1px solid;
+}
+
+.popup_border {
+	border: #cdcdcd 1px solid;
+	padding: 5px;
+	text-align: center;
+}
+
+.ts-startRow {
+	padding: 2px 4px; border-radius: 7px; border: currentColor; border-image: none; max-width: 1em; background-color: rgb(115,133,151);
+}
+
+.gotoPage {
+	border-radius: 7px; border: currentColor; border-image: none; background-color: rgb(208,224,239);
+}
+
+.ui-datepicker-group .ui-datepicker-header a {
+	visibility: hidden !important;
+}
+.ui-datepicker-group .ui-datepicker-year {
+	display:none;
+}
+
+.ui-datepicker-inline {
+	width: 74em !important;
+}
+
+.ui-datepicker-group .ui-datepicker-calendar .ui-state-default{
+	border:none !important;
+	cursor: default !important;
+}
+
+.ui-datepicker-group .ui-datepicker-calendar .ui-state-hover{
+	border:none !important;
+	cursor: default !important;
+}
+
+.ui-datepicker-group .ui-datepicker table tbody tr td{
+	padding-top: 1px;
+}
+.ui-datepicker-group .ui-datepicker-calendar td{
+	padding: 1px;
+}
+
+.btnSwitch {
+	cursor: pointer;
+}
+
+.audio {
+	height: 0px;
+	width: 0px;
+}
+
+.play_back {
+	background-image:url(../../img/common/speaker.png);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 27px;
+	margin: 4px;
+	cursor: pointer;
+}
+
+.playing_back {
+	background-image:url(../../img/common/ani-speaker2.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 27px;
+	margin: 4px;
+	cursor: pointer;
+}
+
+/*Override background color of blockUI*/
+.blockUI.blockOverlay {
+    background-color: #FFFFFF!important;
+}
+
+input[type=checkbox] {
+	display:none;
+}

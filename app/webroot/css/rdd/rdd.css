@@ -1,0 +1,238 @@
+.wrap_status {
+    width: 1000px;
+    margin-top: 10px;
+    margin-left: 18px;
+    font-size: 13px;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrap .table_532 {
+    width: 560px;
+}
+
+.wrap table td {
+    text-align: center;
+}
+
+.wrap label {
+    display: inline;
+}
+
+.inner_table td {
+    padding-left: 0px;
+}
+
+.label_left {
+    width: 200px;
+    float: left;
+    text-align: right;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-right: 20px;
+}
+
+.input_210 {
+    width: 210px;
+}
+
+.input_190 {
+    width: 190px;
+}
+
+.input_150 {
+    width: 150px;
+}
+
+.input_120 {
+    width: 120px;
+}
+
+.input_90 {
+    width: 90px;
+}
+
+.select_130 {
+    width: 130px;
+}
+
+.green_buttons {
+    float: left;
+}
+
+.btn_80 {
+    display:block;
+    width: 80px;
+    text-align: center;
+}
+
+.btn_50 {
+    display:block;
+    width: 50px;
+    text-align: center;
+}
+
+.btn_135 {
+    display:block;
+    width: 140px;
+    text-align: center;
+}
+
+#create_by_prefecture {
+    display: inline-block;
+}
+
+#create_by_district {
+    display: inline-block;
+}
+
+#create_by_prefecture_scroll {
+    display: inline-block;
+}
+
+#tbl_list_district th {
+    background-color: rgb(97,107,117);
+    text-align: left;
+    color:#FFFFFF;
+    padding-left: 10px;
+}
+
+#tbl_list_district td {
+    text-align: left;
+    height: 23px;
+    border: none;
+}
+
+#tbl_list_district th {
+    height: 27px;
+}
+
+.table_532 td {
+    height: 32px;
+    background-color: #FFFFFF;
+}
+
+.table_532 td input {
+    margin-bottom: 5px;
+}
+
+#dialog_choose_district .wrap {
+    width: 890px;
+}
+
+#dialog_choose_district .wrap table{
+    width: 850px;
+}
+
+.select_district_area {
+    height: 435px;
+    overflow: auto;
+}
+
+.lbl_district_name {
+    padding-left: 5px;
+}
+
+.green_buttons_disable {
+    float: left;
+}
+
+.green_buttons_disable a {
+    cursor: default;
+}
+
+.green_buttons_disable a{
+    background-image: -webkit-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: -moz-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: -ms-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: -o-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: linear-gradient(to bottom, #3a8ca7, #3a8ca7);
+    border-radius: 28px;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5px 30px 5px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #b2b2b0;
+}
+
+#list_katakana th {
+    cursor: pointer;
+}
+
+#list_katakana th:hover {
+    background-color: rgb(147, 153, 159);
+}
+
+#list_katakana .district_disabled {
+    background-color: #e5ebf2 !important;
+}
+
+.district_disabled {
+    background-color: #e5ebf2;
+    color: #A0A0A0;
+    cursor: default !important;
+}
+
+.ui-dialog-title {
+    padding-left: 17px;
+}
+
+.err-mesg-20 {
+    font-size: 11px;
+}
+
+#btnCloseDialog:focus {
+    outline: none;
+}
+
+#btnChooseDistrict:focus {
+    outline: none;
+}
+
+#btnChooseDistrictContainer {
+    margin-left: 28px;
+    margin-top: 5px;
+}
+
+input#quantity_item_total:read-only {
+    background-color: #B9C9D9;
+}
+
+.input_switchboard {
+    margin-left: 17px;
+}
+
+#create_by_switchboard tr td:nth-child(2) {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 8px;
+}
+
+.input_err_msg {
+    height: auto;
+    min-height: 25px;
+}
+
+.btnAddInput {
+    display: block;
+    background-image: url(../../img/common/rdd_plus_off.png);
+    width: 20px;
+    height: 20px;
+}
+
+.btnAddInput:hover {
+    background-image: url(../../img/common/rdd_plus_over.png);
+}
+
+.btnRemoveInput {
+    display: block;
+    background-image: url(../../img/common/close_off.png);
+    width: 20px;
+    height: 20px;
+    margin-right: 9px;
+    margin-top: 4px;
+}
+
+.btnRemoveInput:hover {
+    background-image: url(../../img/common/close_over.png);
+}

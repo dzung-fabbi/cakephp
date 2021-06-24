@@ -1,0 +1,59 @@
+.btnBlank {
+    /*display: block;
+    width: 16px;
+    height: 16px;
+    float: left;*/
+}
+
+input[type=checkbox] {display:none;}
+#modalAddSchedule .modal-dialog {width: 1022px;}
+#modalEditSchedule .modal-dialog {width: 1022px;}
+#modalCallRightAway .modal-dialog {width: 1000px; margin-top: 80px;}
+#SmsSchedule .form-group {max-width: 998px;}
+.dhx_cal_cover {height: 100% !important;}
+.dialog_end_call {width: 70px;}
+.break_word {word-break: break-all;}
+
+.temp_finish_alert {
+    margin-bottom: 10px;
+    text-align: center !important;
+    font-weight: bold;
+    color: red;
+}
+
+.create_date {
+    /*width: 93.06%;*/
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+
+#date_picker_btn {
+    /*float: left;
+    width: 6.94%;
+    border: 1px solid #ccc;*/
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+select[name="end_hour"], select[name="end_minute"] {
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+select[name="end_hour"] {
+    margin-left: 15px;
+}

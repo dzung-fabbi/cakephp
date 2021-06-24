@@ -1,0 +1,33 @@
+.dhx_cal_container table td, .dhx_cal_container table th {padding: 0px !important;}
+.dhx_cal_navline {display: none;}
+.dhx_cal_data table, .dhx_cal_data tr, .dhx_matrix_scell, .dhx_matrix_line {height: 38px !important;}
+.dhtmlx_popup_button, .dhx_btn_set, .dhx_btn_set div {height: 33px;}
+.timeline_container{
+    height: 80px;
+    width: 562px;
+    overflow: hidden;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.dhx_cal_container {
+    width: 779px;
+    height: 139px;
+    margin-left: -200px;
+    margin-top: -61px;
+}
+
+.timeline_disabled {cursor: not-allowed;}
+.timeline_disabled .dhx_scale_bar {background-color: #eee !important;}
+.timeline_disabled .dhx_matrix_cell {background-color: #eee !important;}
+
+.over_timeline_disabled {
+    display: none;
+    height: 80px;
+    width: 562px;
+    border-radius: 5px;
+    opacity: 0.5;
+    margin-top: -80px;
+    cursor: not-allowed;
+}
+.dhtmlXTooltip.tooltip {z-index: 1000;}

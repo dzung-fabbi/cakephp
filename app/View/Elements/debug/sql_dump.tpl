@@ -1,0 +1,1 @@
+{include_php file=$smarty.const.ROOT|cat:"/app/View/Elements/debug/sql_dump.php"}

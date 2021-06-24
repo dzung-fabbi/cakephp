@@ -1,0 +1,288 @@
+.tablesorter-gold tbody tr.white-status > td {
+    background-color: white !important;
+}
+
+.tablesorter-gold tbody tr.pink-status > td {
+    background-color: #FF66FF !important;
+}
+
+.tablesorter-gold tbody tr.red-status > td {
+    background-color: red !important;
+}
+
+.tablesorter-gold tbody tr.gray-status > td {
+    background-color: gray !important;
+}
+
+.ui-dialog .ui-dialog-content {
+    padding-top: 0;
+}
+
+.small_buttons a {
+    border: 1px solid #ccc;
+    padding: 1px 20px;
+    text-decoration: blink;
+    font-size: 12px;
+}
+
+.mgLeft20 {
+	margin-left: 20px;
+}
+
+.mgBtt20 {
+	margin-bottom: 20px;
+}
+
+.alignCenter {
+	text-align:center;
+}
+
+#input_info_schedule th {
+	width: 30%;
+    background-color: #ccc;
+    font-weight: normal;
+    height: 40px;
+}
+
+#input_info_schedule td {
+	width: 30%;
+    background-color: #fff;
+    font-weight: normal;
+    height: 40px;
+}
+
+.green_buttons a {
+	float: left;
+    /*width: 85px;*/
+    height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.gray_buttons a {
+	float: left;
+    width: 85px;
+    height: 20px;
+    padding-top: 5px;
+    text-align: center;
+}
+
+.green_buttons a#btnCall {
+    width: 40px;
+}
+
+.gray_buttons a#btn_cancel {
+    width: 40px;
+}
+
+#create_date {
+	width: 155px;
+	margin-right: 2px;
+	display: inline;
+}
+
+#outgoing_time_from option:disabled {
+    color: #C8C1C1;
+}
+
+#outgoing_time_to option:disabled {
+    color: #C8C1C1;
+}
+
+label.error {
+    float: right;
+    width: 340px;
+    margin-top: 5px;
+    text-align: left;
+}
+
+label.error_date_time {
+    float: right;
+    width: 340px;
+    margin-top: 5px;
+    text-align: left;
+    color: red;
+    vertical-align: middle;
+}
+
+#dialog_add_call_list {
+    overflow: inherit!important;
+}
+
+#error_message li {
+    list-style: none;
+}
+
+#popup_mesg_error {
+    margin: 5px 0;
+    font-size: 1em;
+    text-align: center;
+    padding: 0px;
+}
+
+#popup_mesg_error li {
+    list-style: none;
+}
+
+.fldformat {
+    margin-left: 0px;
+}
+
+.lblformat {
+    font-size: 1.23em;
+}
+
+.margleft_210 {
+    margin-left: 210px;
+}
+
+.margright_170 {
+    margin-right: 170px;
+}
+
+.success_mess {
+	color: blue;
+}
+
+.callnumber_div .green_buttons {
+    border: none;
+}
+
+.callnumber_div .gray_buttons {
+    border: none;
+}
+
+.btnFunc {
+    display: block;
+    width: 16px;
+    height: 16px;
+    /*margin-left: 26px;*/
+    float: left;
+}
+
+.btnBlank {
+    display: block;
+    width: 16px;
+    height: 16px;
+    float: left;
+}
+
+.btnEdit {
+    background-image: url(../../img/common/btn_edit.png);
+}
+.btnEdit:hover {
+    background-image: url(../../img/common/btn_edit_over.png);
+}
+.btnDuplicate {
+    background-image: url(../../img/common/btn_duplicate.png);
+}
+.btnDuplicate:hover {
+    background-image: url(../../img/common/btn_duplicate_over.png);
+}
+.btnStatistic {
+    background-image: url(../../img/common/btn_statistic.png);
+}
+.btnStatistic:hover {
+    background-image: url(../../img/common/btn_statistic_over.png);
+}
+.btnStop {
+    background-image: url(../../img/common/btn_stop.png);
+}
+.btnStop:hover {
+    background-image: url(../../img/common/btn_stop_over.png);
+}
+.btnRestart {
+    background-image: url(../../img/common/btn_restart.png);
+}
+.btnRestart:hover {
+    background-image: url(../../img/common/btn_restart_over.png);
+}
+
+.btn_margin_left {
+    margin-left: 30px;
+}
+
+.btn_110 {
+    display: block;
+    width: 110px;
+    text-align: center;
+}
+
+
+.dhx_cal_navline {
+    display: none;
+}
+
+#timeline_container {
+    width: 733px;
+    height: 92px;
+    margin-left: 220px;
+    overflow: hidden;
+    float: left;
+    margin-top: -26px;
+}
+
+#timeline_container2 {
+    width: 733px;
+    height: 92px;
+    margin-left: 190px;
+    overflow: hidden;
+    float: left;
+    margin-top: -26px;
+}
+
+#timeline_container .dhx_cal_container {
+    width: 950px;
+    height: 152px;
+    margin-left: -199px;
+    margin-top: -60px;
+}
+
+#timeline_container2 .dhx_cal_container {
+    width: 950px;
+    height: 152px;
+    margin-left: -209px;
+    margin-top: -60px;
+}
+
+.dhx_section_time select:nth-child(9) {display: none;}
+.dhx_section_time select:nth-child(8) {display: none;}
+.dhx_section_time select:nth-child(7) {display: none;}
+.dhx_section_time select:nth-child(4) {display: none;}
+.dhx_section_time select:nth-child(3) {display: none;}
+.dhx_section_time select:nth-child(2) {display: none;}
+.dhx_section_time select:nth-child(1) {margin-left: -100px;}
+
+.dhx_cal_light_wide {
+    width: 500px !important;
+}
+
+.dhx_cal_larea {
+    width: 495px !important;
+}
+
+.dhx_scheduler_timeline table table {
+    height: 50px !important;
+}
+
+.dhx_scheduler_timeline table .dhx_cal_data {
+    height: 50px !important;
+}
+
+.box_spacer_10 {
+    height: 10px;
+}
+
+#CallRestriction {
+    height: 600px;
+    overflow-y: auto;
+    width: 1010px;
+}
+
+input[type=checkbox] {
+    display:none;
+}
+
+.select_disabled {
+    background-color: #C4C5CC;
+}

@@ -1,0 +1,1 @@
+{$view->element('outschedule/status_view')}

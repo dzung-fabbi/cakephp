@@ -1,0 +1,16 @@
+input[type=checkbox] {
+	display:none;
+}
+
+.thead_pull_down tr th {
+	background-color: #fff !important;
+}
+
+#error_tel_birthday_fee {
+	color: red;
+}
+
+.item_main_error {
+	text-align: center;
+	color: red;
+}

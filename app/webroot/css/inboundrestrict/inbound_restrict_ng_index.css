@@ -1,0 +1,20 @@
+input[type=checkbox] {
+	display:none;
+}
+
+.expired {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-right: none;
+}
+.date_picker_btn {
+    border-radius: 5px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.modal-dialog {
+	width: 800px !important;
+}
+#error_tel {
+	color: red;
+}

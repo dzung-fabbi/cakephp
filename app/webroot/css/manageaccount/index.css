@@ -1,0 +1,10 @@
+input[type=checkbox] {
+    display:none;
+}
+
+#tblListNumber th{
+    padding: 2px;
+}
+#list_number_div{
+	margin: 0 auto;
+}

@@ -1,0 +1,501 @@
+/* CSS Created by CSS CHECKBOX */
+/**********************************/
+/**** www.CSScheckbox.com *********/
+
+/*general styles for all CSS Checkboxes*/
+label {
+-webkit-touch-callout: none;
+-webkit-user-select: none;
+-khtml-user-select: none;
+-moz-user-select: none;
+-ms-user-select: none;
+user-select: none;
+display:block;
+}
+
+.text_not_copy {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+input[type=checkbox].css-checkbox {
+	position: absolute;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	height:1px;
+	width:1px;
+	margin:-1px;
+	padding:0;
+	border:0;
+}
+
+input[type=checkbox].css-checkbox + label.css-label {
+	padding-left:25px;
+	padding-right:25px;
+	margin-top:8px;
+	height:15px;
+	display:inline-block;
+	line-height:15px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox:checked + label.css-label {
+	/*background-position: 0 -15px;
+	margin-top: 8px;*/
+}
+
+.css-label{
+	background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);
+}
+
+/*specific classes related to Checkbox skins*/
+
+.lite-green-check{background-image:url(http://csscheckbox.com/checkboxes/lite-green-check.png);}
+.lite-blue-check{background-image:url(http://csscheckbox.com/checkboxes/lite-blue-check.png);}
+.lite-gray-check{background-image:url(http://csscheckbox.com/checkboxes/lite-gray-check.png);}
+.lite-cyan-check{background-image:url(http://csscheckbox.com/checkboxes/lite-cyan-check.png);}
+.lite-orange-check{background-image:url(http://csscheckbox.com/checkboxes/lite-orange-check.png);}
+.lite-red-check{background-image:url(http://csscheckbox.com/checkboxes/lite-red-check.png);}
+.lite-bluegreen-check{background-image:url(../../img/common/lite-bluegreen-check.png);}
+
+.lite-x-cyan{background-image:url(http://csscheckbox.com/checkboxes/lite-x-cyan.png);}
+.lite-x-gray{background-image:url(http://csscheckbox.com/checkboxes/lite-x-gray.png);}
+.lite-x-blue{background-image:url(http://csscheckbox.com/checkboxes/lite-x-blue.png);}
+.lite-x-orange{background-image:url(http://csscheckbox.com/checkboxes/lite-x-orange.png);}
+.lite-x-red{background-image:url(http://csscheckbox.com/checkboxes/lite-x-red.png);}
+.lite-x-green{background-image:url(http://csscheckbox.com/checkboxes/lite-x-green.png);}
+
+.mac-style{background-image:url(http://csscheckbox.com/checkboxes/mac-style.png);}
+.mario-style{background-image:url(http://csscheckbox.com/checkboxes/mario-style.png);}
+.alert-style{background-image:url(http://csscheckbox.com/checkboxes/alert-style.png);}
+.lite-plus{background-image:url(http://csscheckbox.com/checkboxes/lite-plus.png);}
+.dark-plus{background-image:url(http://csscheckbox.com/checkboxes/dark-plus.png);}
+.dark-plus-cyan{background-image:url(http://csscheckbox.com/checkboxes/dark-plus-cyan.png);}
+.dark-plus-orange{background-image:url(http://csscheckbox.com/checkboxes/dark-plus-orange.png);}
+.dark-check-cyan{background-image:url(http://csscheckbox.com/checkboxes/dark-check-cyan.png);}
+.dark-check-green{background-image:url(http://csscheckbox.com/checkboxes/dark-check-green.png);}
+.dark-check-orange{background-image:url(http://csscheckbox.com/checkboxes/dark-check-orange.png);}
+
+
+.depressed-lite-small{background-image:url(http://csscheckbox.com/checkboxes/depressed-lite-small.png);}
+.elegant{background-image:url(http://csscheckbox.com/checkboxes/elegant.png);}
+.depressed{background-image:url(http://csscheckbox.com/checkboxes/depressed.png);}
+.chrome-style{background-image:url(http://csscheckbox.com/checkboxes/chrome-style.png);}
+.web-two-style{background-image:url(http://csscheckbox.com/checkboxes/web-two-style.png);}
+.vlad{background-image:url(http://csscheckbox.com/checkboxes/vlad.png);}
+.klaus{background-image:url(http://csscheckbox.com/checkboxes/klaus.png);}
+
+input[type=checkbox].css-checkbox.med + label.css-label.med {
+	padding-left:22px;
+    height:17px;
+	display:inline-block;
+	line-height:17px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.med:checked + label.css-label.med {
+    /*background-position: 0 -17px;*/
+}
+input[type=checkbox].css-checkbox.sme + label.css-label.sme {
+	padding-left:22px;
+    height:16px;
+	display:inline-block;
+	line-height:16px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.sme:checked + label.css-label.sme{
+	/*background-position: 0 -16px;*/
+}
+input[type=checkbox].css-checkbox.lrg + label.css-label.lrg {
+	padding-left:22px;
+    height:20px;
+	display:inline-block;
+	line-height:20px;
+	background-repeat:no-repeat;
+	background-position: 0 0;
+	font-size:15px;
+	vertical-align:middle;
+    cursor:pointer;
+}
+
+input[type=checkbox].css-checkbox.lrg:checked + label.css-label.lrg{
+	/*background-position: 0 -20px;*/
+}
+
+
+/* additional for normal checks */
+
+input[type=checkbox]:disabled + label {
+	color:#ccc;
+}
+
+
+input[type=checkbox] + label {
+	/*background: #999;*/
+	background-image:url(../../img/common/uncheck.png);
+	height: 15px;
+	width: 15px;
+	display:inline-block;
+	/*padding: 0 0 0 0px;*/
+}
+
+input[type=checkbox]:checked + label {
+	/*background: #0080FF;*/
+	background-image:url(../../img/common/check.png);
+	height: 15px;
+	width: 15px;
+	display:inline-block;
+	/*padding: 0 0 0 0px;*/
+}
+
+input[type=checkbox]:disabled + label {
+	/*background: #0080FF;*/
+	background-image:url(../../img/common/checkbox_disabled.png);
+	height: 15px;
+	width: 15px;
+	display:inline-block;
+	/*padding: 0 0 0 0px;*/
+}
+
+input[type=checkbox]:disabled:checked + label {
+	/*background: #0080FF;*/
+	background-image:url(../../img/common/checked_disabled.png);
+	height: 15px;
+	width: 15px;
+	display:inline-block;
+	/*padding: 0 0 0 0px;*/
+}
+
+.hovering {
+	background-color: #d9d9d9;
+}
+
+/*new new*/
+/*.modal-body {
+	max-height: calc(100vh - 210px);
+	overflow-y: auto;
+}*/
+
+.row{
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.nav-canvas {
+	background-color: #F5F5F5;
+}
+
+/*a {
+	color: #5577A5;
+}*/
+
+.navbar {
+	border: none;
+}
+
+/* .navbar-inner {
+/*	background: #ffffff; /* Old browsers */
+/*	background: -moz-linear-gradient(top,  #ffffff 0%, #eee1b6 47%, #eee1b6 50%, #eee1b6 100%); /* FF3.6-15 */
+/*	background: -webkit-linear-gradient(top,  #ffffff 0%,#eee1b6 47%,#eee1b6 50%,#eee1b6 100%); /* Chrome10-25,Safari5.1-6 */
+/*	background: linear-gradient(to bottom,  #ffffff 0%,#eee1b6 47%,#eee1b6 50%,#eee1b6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+/*	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eee1b6',GradientType=0 ); /* IE6-9 */
+/*}*/
+
+.navbar-inner {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #25b29c 49%, #25b29c 51%, #25b29c 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#25b29c 49%,#25b29c 51%,#25b29c 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#25b29c 49%,#25b29c 51%,#25b29c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#25b29c',GradientType=0 ); /* IE6-9 */
+	background-image: linear-gradient(#25B29C 20%, #238979 90%);
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	/*background-color: #CFDCA2;*/
+	background-color: #EEEEEE;
+}
+
+.btn:hover, .btn:focus {
+	opacity: 0.8;
+}
+
+.btn-primary {
+	background-image: linear-gradient(#25B29C 20%, #238979 90%);
+	background-repeat: repeat-x;
+	border-color: #25B29C;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .active.btn-primary, .open > .btn-primary.dropdown-toggle {
+	background-color: #CFDCA2;
+	border-color: #F0E5BE;
+}
+
+.btn-gold {
+	color: #ffffff;
+	background-image: linear-gradient(to bottom, rgb(240,212,153), rgb(156,127,63));
+	background-repeat: repeat-x;
+	border-color: #9c7f3f #9c7f3f #1f6377;
+}
+
+.btn-default {
+	color: #000;
+	background-image: linear-gradient(to bottom, #ffffff 20%, #e6e6e6 90%);
+	background-repeat: repeat-x;
+}
+
+.btn-default:hover {
+	opacity: 0.8;
+	color: #000;
+}
+
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	outline: none;
+	background: white;
+	cursor: inherit;
+	display: block;
+}
+
+.light-gray {
+	background-color: rgba(221, 221, 221, 1) !important;
+}
+
+.iconFormat {
+	/*float: left;*/
+	padding: 2px;
+	font-size: 25px;
+	display: inline-block;
+}
+
+.gotoPage {
+	border: 1px solid #aaa;
+	border-radius: 5px;
+	background-color: #fff;
+	background: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(20%, #ffffff), color-stop(50%, #f6f6f6), color-stop(52%, #eeeeee), color-stop(100%, #f4f4f4));
+	background: -webkit-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background: -moz-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background: -o-linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background: linear-gradient(top, #ffffff 20%, #f6f6f6 50%, #eeeeee 52%, #f4f4f4 100%);
+	background-clip: padding-box;
+	box-shadow: 0 0 3px white inset, 0 1px 1px rgba(0, 0, 0, 0.1);
+	color: #444;
+	text-decoration: none;
+	white-space: nowrap;
+	line-height: 34px;
+}
+
+.loginLogo{
+	background-image:url(../../img/common/rcc_logo.png);
+	height: 106px;
+	width: 540px;
+}
+
+.headerLogo{
+	background-image:url(../../img/common/rcc_header_logo.png);
+	height: 45px;
+	width: 229px;
+}
+
+#slQuesType_chosen {
+	width:100% !important;
+}
+
+#tounyuu_chosen, #question_repeat_chosen {
+	width:15% !important;
+}
+
+.error {
+	color: red;
+	vertical-align:middle;
+}
+.tablesorter-filter {
+	border-radius: 3px;
+}
+.modal-backdrop {
+	z-index: 850 !important;
+}
+.modal {
+	z-index: 900 !important;
+}
+.alignCenter {
+	text-align:center;
+}
+
+.alignRight {
+	text-align:right;
+}
+
+.ptop7 {
+	padding-top: 7px;
+}
+
+.iconCenterFormat {
+	font-size:25px;
+}
+
+select[name="birthdayYear"] {
+    width: 30%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-left: 15px;
+}
+select[name="birthdayMonth"], select[name="birthdayDay"] {
+    width: 20%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+/* #8298 add consentday */
+select[name="consentdayYear"] {
+    width: 30%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    margin-left: 15px;
+}
+
+select[name="consentdayMonth"], select[name="consentdayDay"] {
+    width: 20%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.red12 {
+	margin: 0px;
+	font-size:12px;
+	color:red;
+}
+
+.glyphicon-edit {
+	color: rgba(254, 97, 94, 1);
+}
+
+.glyphicon-duplicate {
+	color: rgba(166, 130, 206, 1);
+}
+.glyphicon-export {
+	color: rgba(64, 198, 243, 1);
+}
+
+.glyphicon-edit:hover{
+	opacity: 0.8;
+}
+.glyphicon-duplicate:hover{
+	opacity: 0.8;
+}
+.glyphicon-export:hover{
+	opacity: 0.8;
+}
+.header-span {
+	color: #fff;
+	font-size:15px;
+	margin-left:10px;
+}
+
+.slCustInfo {
+	margin-top:5px;
+	margin-bottom:5px;
+}
+
+.templateTable-60 {
+	width:60px;
+	min-width:60px;
+}
+
+.templateTable-40 {
+	min-width:40px;
+}
+
+.templateTable-140 {
+	width:40px;
+	min-width:140px;
+}
+
+a.disabled-link{
+	pointer-events: none;
+	opacity: 0.6;
+}
+
+.footer-content{
+	opacity: 0.8;
+}
+
+.bundleCheckbox{
+	margin-bottom: -3px;
+}

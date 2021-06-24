@@ -1,0 +1,6 @@
+input[type=checkbox] {
+	display:none;
+}
+.fixHeight{
+	height: 50px;
+}

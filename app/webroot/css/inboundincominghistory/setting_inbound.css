@@ -1,0 +1,13 @@
+input[type=checkbox] {display:none;}
+.modal-body .form-group {min-height: 40px;}
+.break_word {word-break: break-all;}
+.rules_div tr th {
+	min-width: 150px !important;
+}
+.input-group-btn{
+	top : -3px;
+}
+.txt-desc-date{
+	color : red;
+	font-size: 13px;
+}

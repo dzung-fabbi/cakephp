@@ -1,0 +1,96 @@
+.modal-body {
+	max-height: calc(100vh - 210px);
+	overflow-y: auto;
+}
+
+.row{
+  margin-top: 10px;
+  margin-bottom: 10px
+}
+
+.sidebar-nav .nav-header {
+	background-color: #F0E5BE;
+	border-color: red;
+}
+.nav {
+	background-color: #F0E5BE;
+}
+a {
+	color: #5577A5;
+}
+
+.navbar {
+	border: none;
+}
+
+.navbar-inner {
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #eee1b6 47%, #eee1b6 50%, #eee1b6 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#eee1b6 47%,#eee1b6 50%,#eee1b6 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #ffffff 0%,#eee1b6 47%,#eee1b6 50%,#eee1b6 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#eee1b6',GradientType=0 ); /* IE6-9 */
+
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+	background-color: #CFDCA2;
+}
+
+.btn:hover, .btn:focus {
+	opacity: 0.8;
+}
+
+.btn-primary {
+	background-image: linear-gradient(to bottom, #9bc159, #6b873d);
+	background-repeat: repeat-x;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .active.btn-primary, .open > .btn-primary.dropdown-toggle {
+	background-color: #CFDCA2;
+	border-color: #F0E5BE;
+}
+
+.btn-gold {
+	color: #ffffff;
+	background-image: linear-gradient(to bottom, rgb(240,212,153), rgb(156,127,63));
+	background-repeat: repeat-x;
+	border-color: #9c7f3f #9c7f3f #1f6377;
+}
+
+.btn-default {
+	color: #000;
+	background-image: linear-gradient(to bottom, #ffffff, #e6e6e6);
+	background-repeat: repeat-x;
+}
+
+.btn-default:hover {
+	opacity: 0.8;
+	color: #000;
+}
+
+.btn-file {
+	position: relative;
+	overflow: hidden;
+}
+.btn-file input[type=file] {
+	position: absolute;
+	top: 0;
+	right: 0;
+	min-width: 100%;
+	min-height: 100%;
+	font-size: 100px;
+	text-align: right;
+	filter: alpha(opacity=0);
+	opacity: 0;
+	outline: none;
+	background: white;
+	cursor: inherit;
+	display: block;
+}
+
+.light-gray {
+	background-color: rgba(221, 221, 221, 1) !important;
+}
+
+.tablesorter-filter {
+}

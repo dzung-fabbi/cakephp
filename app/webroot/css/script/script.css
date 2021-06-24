@@ -1,0 +1,155 @@
+@charset "utf-8";
+
+.tblQues, .tblAisatsu, .tblTimeOut, .tblEnd, .tblScript{
+	width: 80%;
+	margin-left: 120px;
+	margin-top: 30px;
+}
+.colQues {
+   	width: 50%;
+   	float: left;
+   	margin-bottom: 10px;
+}
+
+.colAnsw {
+   	width: 50%;
+   	float: left;
+   	margin-bottom: 10px;
+}
+
+.btn_100 {
+    display: block;
+    width: 100px;
+    text-align: center;
+}
+
+.tblItem {
+   	width: 100%;
+	border-spacing: 0;
+	border : #cdcdcd 1px solid;
+	border-width: 1px 0 0 1px;
+}
+
+.tblItem th {
+    color: #FFFFFF;
+    background-color: rgb(97,107,117);
+    border-collapse: collapse;
+    padding: 4px;
+    text-align: left;
+}
+
+.tblItem th, .tblItem td {
+	border: #cdcdcd 1px solid;
+    border-width: 0 1px 1px 0;
+    font-size: 13px;
+}
+
+.tblAsk td {
+    background-color: #FFFFFF;
+}
+
+.tblListAnsw td input[type="text"]:disabled {
+    background-color: #E5EBF2;
+    border: 1px solid #cdcdcd;
+}
+
+.tblListAnsw td input[type="text"] {
+    background-color: #FFFFFF;
+    border: 1px solid gray;
+}
+
+.tblListAnsw tr { background-color: rgb(229,235,242) !important;}
+
+.upload_progress {
+    background: rgb(83,200,239);
+    height: 20px;
+    width: 0px;
+}
+
+.uploaded_file_name{
+    font-weight: bold;
+}
+
+textarea {
+    resize: none;
+}
+
+.divAddAnsw {
+    float: left;
+    width: 50%;
+}
+
+.divRemoveAnsw {
+    float: left;
+    width: 50%;
+}
+
+.btnRemoveQues {
+    display: block;
+    background-image: url(../../img/common/close_off.png);
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.btnRemoveQues:hover {
+    display: block;
+    background-image: url(../../img/common/close_over.png);
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.btnAddQues {
+    display: block;
+    background-image: url(../../img/common/q_plus_off.png);
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.btnAddQues:hover {
+    display: block;
+    background-image: url(../../img/common/q_plus_over.png);
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}
+
+.btnAddAnsw {
+    float: right;
+    display: block;
+    background-image: url(../../img/common/plus_off.png);
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.btnAddAnsw:hover {
+    float: right;
+    display: block;
+    background-image: url(../../img/common/plus_over.png);
+    width: 12px;
+    height: 12px;
+    margin-right: 2px;
+}
+
+.btnRemoveAnsw {
+    display: block;
+    background-image: url(../../img/common/minus_off.png);
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+}
+
+.btnRemoveAnsw:hover {
+    display: block;
+    background-image: url(../../img/common/minus_over.png);
+    width: 12px;
+    height: 12px;
+    margin-left: 2px;
+}
+
+.audio_area {
+    margin-top: 20px;
+}

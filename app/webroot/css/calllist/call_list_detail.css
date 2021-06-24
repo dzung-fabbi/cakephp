@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+.lblformat {
+	width: auto;
+}
+
+.list_name_div input {
+	margin-left: 37px;
+}
+
+#dialog_add_tel_list table tr {
+	height: 40px;
+}
+
+.tel_list_ctl_div{
+    width: 150px;
+    float: left;
+    border: none;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.birthday_date {
+	width: 220px;
+	margin-right: 5px;
+}
+
+/* #8298 add consentday */
+.consentday_date {
+	width: 220px;
+	margin-right: 5px;
+}

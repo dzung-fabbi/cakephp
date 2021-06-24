@@ -1,0 +1,138 @@
+.no_answer {
+    background-color: #e5ebf2;
+}
+.no_bg_color {
+    background-color: #FFFFFF;
+}
+
+.label_left {
+    width: 115px;
+    float: left;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 3px;
+    margin-left: -42px;
+}
+
+.label_right {
+    width: 115px;
+    float: left;
+    text-align: left;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.label_not_bold {
+    width: 269px;
+    float: left;
+    text-align: left;
+    margin-top: 3px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+
+
+.wrap_status {
+    width: 1000px;
+    margin-top: 10px;
+    margin-left: 18px;
+    font-size: 13px;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
+
+.wrap_status .table_90 {
+    width: 972px;
+}
+
+.wrap_status .table_90 th{
+    text-align: center;
+}
+
+.btn_stop_call {
+    background-image: linear-gradient(to bottom, #b3571e, #b3571e) !important;
+}
+
+.btn_stop_call:hover {
+    background-image: linear-gradient(to bottom, #e66f27, #e66f27) !important;
+}
+
+.wrap_status table td {
+    text-align: center;
+}
+
+.fldformat {
+    width: 930px;
+    float: left;
+    height: initial;
+}
+
+.btn_135 {
+    display:block;
+    width: 165px;
+    text-align: center;
+}
+
+.btn_margin_left {
+    margin-left: 14px
+}
+
+.label_script_name {
+    word-break: break-all;
+}
+
+#change_proc_num {
+    width: 118px;
+    padding: 2px 5px;
+    margin-left: -48px;
+    /*padding-left: 37px;*/
+}
+
+.green_buttons, .green_buttons_disable {
+    float: left;
+}
+
+.label_underline {
+    text-decoration: underline;
+}
+
+.green_buttons_disable a {
+    cursor: default;
+}
+
+.green_buttons_disable a{
+    background-image: -webkit-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: -moz-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: -ms-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: -o-linear-gradient(top, #3a8ca7, #3a8ca7);
+    background-image: linear-gradient(to bottom, #3a8ca7, #3a8ca7);
+    border-radius: 28px;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #b2b2b0;
+}
+
+.green_buttons a{
+    padding: 5px 10px 5px 10px;
+}
+
+.err_proc_num {
+    height: 20px;
+    margin-left: 806px;
+    margin-top: -17px;
+    font-size: 0.8em;
+    margin-bottom: -3px;
+    float: left;
+}
+
+.box_spacer {
+    float: left;
+    width: 100%;
+    height: 18px;
+}
+
+.lbl_red {
+    color: red;
+}

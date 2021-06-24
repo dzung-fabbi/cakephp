@@ -1,0 +1,23 @@
+.btn_110 {
+    display:block;
+    width: 110px;
+    text-align: center;
+}
+
+.btn_margin_left {
+    margin-left: 30px
+}
+
+.btn_function {
+    float: left;
+    margin-bottom: 8px;
+    margin-top: -3px;
+}
+
+.dz-filename span {
+    word-wrap: break-word;
+}
+
+.success-mgs {
+    color: blue;
+}

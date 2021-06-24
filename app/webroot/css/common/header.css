@@ -1,0 +1,47 @@
+#header {
+	background-color:#53c8ef;
+	height: 87px;
+}
+
+#hleft {
+	background: rgb(83,200,239);
+	width: 225px;
+	height: 87px;
+	text-align: center;
+	color: white;
+	line-height: 87px;
+	font-size: 28px;
+	float: left;
+}
+
+#header_container {
+	height: 100px;
+	width:1070px;
+}
+
+#hcontents {
+	height: 87px;
+	line-height: 87px;
+	margin-left: 25%;
+}
+
+#hbuttons {
+	display:inline-block;
+	position:absolute;
+	width:150px;
+	height:50px;
+	padding-top: 10px;
+	padding-bottom: 25px;
+	left:1090px;
+	top:0px;
+}
+
+.header_title {
+	color: white;
+	font-size:17px;
+	font-weight: bold;
+}
+
+.divider {
+	height: 10px;
+}

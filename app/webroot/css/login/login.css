@@ -1,0 +1,94 @@
+body {
+	background-color: #f2f2f2;
+}
+
+
+#login_container {
+	width: 398px;
+	margin: auto;
+}
+
+#login_box {
+	height: 300px;
+	margin-top: 250px;
+	padding-left: 45px;
+
+}
+
+.login_lbl {
+	padding-right: 10px;
+	color: rgb(73,72,71);
+	padding-top: 5px;
+}
+
+.login_button a{
+	background: #3a4652;
+	background-image: -webkit-linear-gradient(top, #3a4652, #3a4652);
+	background-image: -moz-linear-gradient(top, #3a4652, #3a4652);
+	background-image: -ms-linear-gradient(top, #3a4652, #3a4652);
+	background-image: -o-linear-gradient(top, #3a4652, #3a4652);
+	background-image: linear-gradient(to bottom, #3a4652, #3a4652);
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: Arial;
+	color: #fff !important;
+	font-size: 16px;
+	padding: 5px 30px 5px 30px;
+	text-decoration: none;
+	font-weight: bold;
+	border-image: none;
+	margin-left: 105px;
+}
+
+.login_button a:hover{
+	color: #FFFFFF;
+	background: #616b75;
+	background-image: -webkit-linear-gradient(top, #616b75, #616b75);
+	background-image: -moz-linear-gradient(top, #616b75, #616b75);
+	background-image: -ms-linear-gradient(top, #616b75, #616b75);
+	background-image: -o-linear-gradient(top, #616b75, #616b75);
+	background-image: linear-gradient(to bottom, #616b75, #616b75);
+	text-decoration: none;
+	text-shadow: 1px 1px 3px #666666;
+}
+
+.logout_button a{
+	background: #3a4652;
+	background-image: -webkit-linear-gradient(top, #3a4652, #3a4652);
+	background-image: -moz-linear-gradient(top, #3a4652, #3a4652);
+	background-image: -ms-linear-gradient(top, #3a4652, #3a4652);
+	background-image: -o-linear-gradient(top, #3a4652, #3a4652);
+	background-image: linear-gradient(to bottom, #3a4652, #3a4652);
+	-webkit-border-radius: 28;
+	-moz-border-radius: 28;
+	border-radius: 28px;
+	font-family: font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",Osaka, "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	color: #cccccc;
+	font-size: 17px;
+	font-weight: bold;
+	padding: 5px 10px 5px 10px;
+	text-decoration: none;
+	text-align: center;
+	line-height: 50px;
+	margin-left: 50px;
+}
+
+.logout_button a:hover{
+	color: #FFFFFF;
+	background: #616b75;
+	background-image: -webkit-linear-gradient(top, #616b75, #616b75);
+	background-image: -moz-linear-gradient(top, #616b75, #616b75);
+	background-image: -ms-linear-gradient(top, #616b75, #616b75);
+	background-image: -o-linear-gradient(top, #616b75, #616b75);
+	background-image: linear-gradient(to bottom, #616b75, #616b75);
+	text-decoration: none;
+	text-shadow: 1px 1px 3px #666666;
+}
+
+#menu_blank {
+	height: 602px;
+	width: 225px;
+	margin: auto;
+	float: left;
+}
