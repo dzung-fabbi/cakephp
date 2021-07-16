@@ -23,6 +23,7 @@
 					<div class="form-group col-sm-7">
 						<select id="company_id" name="company_id" class="form-control">
 							<option value=""></option>
+							<option value="all">全て</option>
 							{foreach from=$accounts item=values}
 								<option value="{$values.M02Company.company_id}">{$values.M02Company.company_name}</option>
 							{/foreach}
