@@ -531,6 +531,7 @@ class DownloadResultController extends AppController {
     }
     function download_all_result() {
         $fullPath = $this->ESession->getResultDataDownload($this);
+        $filename = substr($fullPath, strlen("/home/robo/var/bulk_history/") - strlen($fullPath));
         $filesize = filesize($fullPath);
 
         header("Pragma: public");
@@ -538,7 +539,7 @@ class DownloadResultController extends AppController {
         header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
         header("Cache-Control: private",false);
         header("Content-Type: application/zip");
-        header("Content-Disposition: attachment; filename=\"".basename($fullPath)."\";" );
+        header("Content-Disposition: attachment; filename=\"".$filename."\";" );
         header("Content-Transfer-Encoding: binary");
         header("Content-Length: ".$filesize);
         ob_clean();
