@@ -533,7 +533,6 @@ class DownloadResultController extends AppController {
         $fullPath = $this->ESession->getResultDataDownload($this);
         $filename = substr($fullPath, strlen("/home/robo/var/bulk_history/") - strlen($fullPath));
         $filesize = filesize($fullPath);
-
         header("Pragma: public");
         header("Expires: 0");
         header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
