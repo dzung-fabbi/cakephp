@@ -483,7 +483,70 @@ class DownloadResultController extends AppController {
 		$this->Session->delete('result_data_download');
 		exit;
 	}
+	function buffer_download_all_data() {
+        $data = $this->data;
+        if (empty($data)) {
+            $results = array(
+                'status' => 'systemerror'
+            );
+            echo json_encode($results);
+            exit;
+        }
+        $divisions = array(
+            'outbound' => 'アウトバウンド',
+            'inbound' => 'インバウンド',
+            'sms' => 'SMS',
+        );
 
+        $division_code = $data['division_code'];
+        $division_code = $divisions[$division_code];
+        $year = $data['year'];
+        $month = $data['month'];
+        $filename = $division_code . "_" . $year . $month . '.zip';
+        $path_base = "/home/robo/var/bulk_history/";
+        $fullPath = $path_base.$filename;
+        if( headers_sent() )
+            die('Headers Sent');
+
+        if(ini_get('zlib.output_compression'))
+            ini_set('zlib.output_compression', 'Off');
+
+        if( file_exists($fullPath) )
+        {
+            $this->ESession->setResultDataDownload($fullPath, $this);
+            $results = array(
+                'status' => 'success'
+            );
+            echo json_encode($results);
+            exit;
+
+        } else {
+            $results = array(
+                'status' => 'file_not_found'
+            );
+            echo json_encode($results);
+            die();
+        }
+
+    }
+    function download_all_result() {
+        $fullPath = $this->ESession->getResultDataDownload($this);
+        $filename = substr($fullPath, strlen("/home/robo/var/bulk_history/") - strlen($fullPath));
+        $filesize = filesize($fullPath);
+        header("Pragma: public");
+        header("Expires: 0");
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header("Cache-Control: private",false);
+        header("Content-Type: application/zip");
+        header("Content-Disposition: attachment; filename=\"".$filename."\";" );
+        header("Content-Transfer-Encoding: binary");
+        header("Content-Length: ".$filesize);
+        ob_clean();
+        flush();
+        echo readfile( $fullPath );
+        $this->Session->delete('result_data_download');
+        exit;
+    }
 	function get_answer_pos($schedule_id) {
 		$arr_answer_pos = array();
 		$current_pos = 1;

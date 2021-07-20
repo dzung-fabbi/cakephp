@@ -61,6 +61,11 @@ $(document).ready(function() {
 		var tel_number = $('#tel_number').val();
 		var date_from = $('#expired_date_from').val();
 		var date_to = $('#expired_date_to').val();
+		var year = new Date(date_from).getFullYear();
+		var month = new Date(date_from).getMonth() + 1;
+		if (month < 10 ) {
+			month = '0' + month;
+		}
 
 		var error_expired = show_msg_error_expired();
 		$(document).on('change', '.expired', function () {
@@ -81,32 +86,60 @@ $(document).ready(function() {
 			}
 			setDisabled();
 
-			if (confirm(MSG_CONFIRM_DOWNLOAD)) {
-				display_load();
-				$.ajax({
-					url: appRoot + "DownloadResult/buffer_download_data",
-					type: "post",
-					data: {
-						division_code: division_code,
-						company_id: company_id,
-						tel_number: tel_number,
-						date_from: date_from,
-						date_to: date_to,
-					},
-					success: function (result) {
-						var result = JSON.parse(result);
-
-						if (result['status'] == 'error_limit_count') {
-							alert(MSG_ERROR_LIMIT_COUNT_1 + result['count_result'] + MSG_ERROR_LIMIT_COUNT_2);
-						} else if (result['status'] == "success") {
-							window.location.href = appRoot + "DownloadResult/download_result";
-						} else {
-							window.location.href = appRoot+"DownloadResult/index";
+			if (company_id == 'all') {
+				if (confirm(year + "年" + month + "月のデータをダウンロードします。よろしいですか？")) {
+					display_load();
+					$.ajax({
+						url: appRoot + "DownloadResult/buffer_download_all_data",
+						type: "post",
+						data: {
+							division_code: division_code,
+							year: year,
+							month: month
+						},
+						success: function (result) {
+							var result = JSON.parse(result);
+							if (result['status'] == 'success') {
+								window.location.href = appRoot + "DownloadResult/download_all_result";
+							} else if (result['status'] == 'file_not_found') {
+								alert("先月分の結果ログファイルが存在しません。システム管理者へ確認してください。");
+								window.location.href = appRoot+"DownloadResult/index";
+							} else {
+								window.location.href = appRoot+"DownloadResult/index";
+							}
+							setEnabled();
+							$.unblockUI();
 						}
-						setEnabled();
-						$.unblockUI();
-					}
-				});
+					});
+				}
+			} else {
+				if (confirm(MSG_CONFIRM_DOWNLOAD)) {
+					display_load();
+					$.ajax({
+						url: appRoot + "DownloadResult/buffer_download_data",
+						type: "post",
+						data: {
+							division_code: division_code,
+							company_id: company_id,
+							tel_number: tel_number,
+							date_from: date_from,
+							date_to: date_to,
+						},
+						success: function (result) {
+							var result = JSON.parse(result);
+
+							if (result['status'] == 'error_limit_count') {
+								alert(MSG_ERROR_LIMIT_COUNT_1 + result['count_result'] + MSG_ERROR_LIMIT_COUNT_2);
+							} else if (result['status'] == "success") {
+								window.location.href = appRoot + "DownloadResult/download_result";
+							} else {
+								window.location.href = appRoot+"DownloadResult/index";
+							}
+							setEnabled();
+							$.unblockUI();
+						}
+					});
+				}
 			}
 		}
 	});
@@ -126,11 +159,11 @@ $(document).ready(function() {
  */
 function update_select_tel(division, company_id) {
 	$('select#tel_number option').not(':first').remove();
-
+	disable_tel_number_and_date(company_id);
 	if (division == '' || company_id == '') {
 		return;
 	}
-
+	show_msg_error_expired();
 	$.ajax({
 		type: "POST",
 		url: appRoot + "DownloadResult/get_number_by_division_and_company/",
@@ -201,5 +234,23 @@ function show_msg_error_expired() {
 		$('#expired_date_to-error').hide().html('');
 		$('#expired_date_from-error').hide().html('');
 		return true;
+	}
+}
+function disable_tel_number_and_date(company_id){
+	var currentDate = new Date();
+	if (company_id == 'all') {
+		$('#tel_number').prop('disabled', true);
+		var firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1).formateCallDate("yy-mm-dd");
+		var lastDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 0).formateCallDate("yy-mm-dd");
+		$("#expired_date_from").datepicker('setDate', new Date(firstDay));
+		$("#expired_date_to").datepicker('setDate', new Date(lastDay));
+		$('#expired_date_from').prop('disabled', true);
+		$('#expired_date_to').prop('disabled', true);
+	} else {
+		$('#tel_number').prop('disabled', false);
+		$("#expired_date_from").datepicker('setDate', currentDate);
+		$("#expired_date_to").datepicker('setDate', currentDate);
+		$('#expired_date_from').prop('disabled', false);
+		$('#expired_date_to').prop('disabled', false);
 	}
 }
