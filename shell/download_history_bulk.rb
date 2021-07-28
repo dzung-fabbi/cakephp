@@ -35,7 +35,7 @@ def downloadOutbound(mysql_cli, start_time, end_time, path_base, path_base_backu
 		moth_of_prev_2_month = '0' + moth_of_prev_2_month.to_s
 	end
 	pre_2_month_file_zip_name = "アウトバウンド_" + year_of_prev_2_month.to_s + moth_of_prev_2_month.to_s + ".zip"
-	FileUtils.cd(path_base_backup) do
+	FileUtils.cd(path_base) do
 		if File.file?(pre_2_month_file_zip_name)
 			FileUtils.move pre_2_month_file_zip_name, path_base_backup
 		end
