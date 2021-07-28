@@ -35,7 +35,7 @@ def downloadOutbound(mysql_cli, start_time, end_time, path_base, path_base_backu
 		moth_of_prev_2_month = '0' + moth_of_prev_2_month.to_s
 	end
 	pre_2_month_file_zip_name = "アウトバウンド_" + year_of_prev_2_month.to_s + moth_of_prev_2_month.to_s + ".zip"
-	FileUtils.cd(path_base) do
+	FileUtils.cd(path_base_backup) do
 		if File.file?(pre_2_month_file_zip_name)
 			FileUtils.move pre_2_month_file_zip_name, path_base_backup
 		end
@@ -172,7 +172,7 @@ def downloadInbound(mysql_cli, start_time, end_time, path_base, path_base_backup
 		month_of_prev_6_month = '0' + month_of_prev_6_month.to_s
 	end
 	pre_6_month_file_zip_name = "インバウンド_" + year_of_prev_6_month.to_s + month_of_prev_6_month.to_s + ".zip"
-	FileUtils.cd(path_base) do
+	FileUtils.cd(path_base_backup) do
 		if File.file?(pre_6_month_file_zip_name)
 			File.delete(pre_6_month_file_zip_name)
 		end
@@ -323,7 +323,7 @@ def downloadSms(mysql_cli, start_time, end_time, path_base, path_base_backup)
 		moth_of_prev_2_month = '0' + moth_of_prev_2_month.to_s
 	end
 	pre_2_month_file_zip_name = "SMS_" + year_of_prev_2_month.to_s + moth_of_prev_2_month.to_s + ".zip"
-	FileUtils.cd(path_base_backup) do
+	FileUtils.cd(path_base) do
 		if File.file?(pre_2_month_file_zip_name)
 			FileUtils.move pre_2_month_file_zip_name, path_base_backup
 		end
@@ -859,7 +859,7 @@ begin
 
 	mysql_cli=Mysql.connect(db_ip, db_id, db_pass, db_schema)
 	mysql_cli.charset="utf8"
-	prev_month = DateTime.now.prev_month(2)
+	prev_month = DateTime.now.prev_month()
 	start_time = prev_month.strftime("%Y-%m-01 00:00:00")
 	end_time = Date.civil(prev_month.year, prev_month.month, -1).strftime("%Y-%m-%d 23:59:59")
 	path_base = '/home/robo/var/bulk_history/'
