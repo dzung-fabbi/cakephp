@@ -18,17 +18,29 @@
 						</select>
 					</div>
 				</div>
-				<div class="form-group">
-					<label class="col-sm-3 control-label">アカウント</label>
-					<div class="form-group col-sm-7">
-						<select id="company_id" name="company_id" class="form-control">
-							<option value=""></option>
-							{foreach from=$accounts item=values}
-								<option value="{$values.M02Company.company_id}">{$values.M02Company.company_name}</option>
-							{/foreach}
-						</select>
+				{if $gs_company}
+					<div class="form-group">
+						<label class="col-sm-3 control-label">アカウント</label>
+						<div class="form-group col-sm-7">
+							<select id="company_id" name="company_id" class="form-control">
+								<option value=""></option>
+								<option value="all">全て</option>
+								{foreach from=$accounts item=values}
+									<option value="{$values.M02Company.company_id}">{$values.M02Company.company_name}</option>
+								{/foreach}
+							</select>
+						</div>
 					</div>
-				</div>
+				{else}
+					<div class="form-group">
+						<label class="col-sm-3 control-label">アカウント</label>
+						<div class="form-group col-sm-7">
+							<select id="company_id" name="company_id" class="form-control" disabled>
+									<option value="{$accounts.M02Company.company_id}">{$accounts.M02Company.company_name}</option>
+							</select>
+						</div>
+					</div>
+				{/if}
 				<div class="form-group">
 					<label class="col-sm-3 control-label label_tel outbound inbound">電話番号</label>
 					<label class="col-sm-3 control-label label_tel sms">通知番号</label>
@@ -38,8 +50,6 @@
 						</select>
 					</div>
 				</div>
-
-
 				<div class="form-group">
 					<label class="col-sm-3 control-label">日付</label>
 					<div class="col-sm-3">

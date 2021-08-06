@@ -613,7 +613,7 @@ class T81IncomingResult extends AppModel {
         return $this->find('all', $options);
     }
 		
-		function getallbyscheduleid_inboundcollation($inbound_id = null, $item_main_column = null, $join_col = null, $ans_only = null, $date_from=null, $date_to=null) {
+		function getallbyscheduleid_inboundcollation($inbound_id = null, $item_main_column = null, $join_col = null, $ans_only = null, $date_from=null, $date_to=null, $valid_del_flag = false) {
 				$options['fields'] = array(
 						'T81IncomingResult.*'
 				);
@@ -636,6 +636,9 @@ class T81IncomingResult extends AppModel {
 				$options['conditions'] = array(
 						'T81IncomingResult.inbound_id' => $inbound_id,
 				);
+				if ($valid_del_flag) {
+					$options['conditions']['T81IncomingResult.del_flag'] = "N";
+				}
 				if ($ans_only) {
 						$options['conditions'][] = 'SUBSTR(T81IncomingResult.ans_accuracy,1,POSITION("/" IN T81IncomingResult.ans_accuracy) - 1) > 0';
 						$options['conditions'][] = 'SUBSTR(T81IncomingResult.ans_accuracy,1,POSITION("/" IN T81IncomingResult.ans_accuracy) - 1) = SUBSTR(T81IncomingResult.ans_accuracy,POSITION("/" IN T81IncomingResult.ans_accuracy) + 1)';

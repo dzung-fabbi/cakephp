@@ -142,7 +142,7 @@ class AppController extends Controller {
 		$this->set('enable_manage_menu', $enable_manage_menu);
 		$this->set("data_hide_menu", $data_hide_menu);
 
-		$enable_download_result = $company_id == $gs_company_id;
+		$enable_download_result = $company_id;
 		$this->set('enable_download_result', $enable_download_result);
 
 		$company_name = $this->M02Company->getCompanyByCompanyId($company_id);
