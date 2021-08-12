@@ -36,7 +36,7 @@
 					<li {if $controller eq "smsschedule"}class="active"{/if}><a class="ajax-link" href="javascript:void(0);" id="lnkSmsSchedule"><i class="glyphicon glyphicon-calendar"></i><span> スケジュール</span></a></li>
 				</ul>
 				{/if}
-				{if $enable_manage_account || $enable_list_manageuser || $enable_manage_menu}
+				{if $enable_manage_account || $enable_list_manageuser || $enable_manage_menu || $enable_download_result}
 					<ul class="nav nav-pills nav-stacked main-menu">
 						<li class="nav-header"><i class="glyphicon glyphicon-cog"></i>管理</li>
 						{if $enable_manage_account}

@@ -25,25 +25,30 @@ class DownloadResultController extends AppController {
 		'sms' => 'SMS',
 	);
 
-	function beforeFilter() {
-		parent::beforeFilter();
+	// 結果ログ一括DL
+	function index($mode = null) {
+		$gs_company = $this->checkGSCompany();
+		if ($gs_company) {
+			$accounts = $this->M02Company->getAll();
+		} else {
+			$company_id = $this->ESession->getUserCompanyId($this);
+			$accounts[] = $this->M02Company->getCompanyByCompanyId($company_id);
+		}
+		$this->set("mode", $mode);
+		$this->set("divisions", $this->divisions);
+		$this->set("accounts", $accounts);
+		$this->set("gs_company", $gs_company);
+	}
 
+	function checkGSCompany() {
 		$company_id = $this->ESession->getUserCompanyId($this);
 		$gs_company = $this->M99SystemParameter->getByFunctionIdAndParameterId('COMPANY', 'GS_COMPANY_ID');
 		$gs_company_id = $gs_company['M99SystemParameter']['parameter_value'];
 
 		if ($company_id != $gs_company_id) {
-			$this->redirect(array('controller' => ''));
+			return false;
 		}
-	}
-
-	// 結果ログ一括DL
-	function index($mode = null) {
-		$accounts = $this->M02Company->getAll();
-
-		$this->set("mode", $mode);
-		$this->set("divisions", $this->divisions);
-		$this->set("accounts", $accounts);
+		return true;
 	}
 
 	/**
@@ -333,7 +338,7 @@ class DownloadResultController extends AppController {
 			if (in_array(QUESTION_AUTH_CHAR,$download_log_question_all_type) && in_array(QUESTION_INBOUND_COLLATION,$download_log_question_all_type)
 					|| in_array(QUESTION_INBOUND_COLLATION,$download_log_question_all_type)){
 				$join_col = 'memo';
-				$logs = $this->T81IncomingResult->getallbyscheduleid_inboundcollation($schedule_id, $item_main_column, $join_col , null , $date_from , $date_to);
+				$logs = $this->T81IncomingResult->getallbyscheduleid_inboundcollation($schedule_id, $item_main_column, $join_col , null , $date_from , $date_to, true);
 			} else{
 				$logs = $this->T81IncomingResult->getAllByScheduleId($schedule_id, $item_main_column, $join_col , null , $date_from , $date_to, true);
 			}
@@ -483,7 +488,60 @@ class DownloadResultController extends AppController {
 		$this->Session->delete('result_data_download');
 		exit;
 	}
+	function buffer_download_all_data() {
+        $data = $this->data;
+        if (empty($data)) {
+            $results = array(
+                'status' => 'systemerror'
+            );
+            echo json_encode($results);
+            exit;
+        }
+        $divisions = array(
+            'outbound' => 'アウトバウンド',
+            'inbound' => 'インバウンド',
+            'sms' => 'SMS',
+        );
 
+        $division_code = $data['division_code'];
+        $division_code = $divisions[$division_code];
+        $year = $data['year'];
+        $month = $data['month'];
+        $filename = $division_code . "_" . $year . $month . '.zip';
+        $path_base = "/home/robo/var/bulk_history/";
+        $fullPath = $path_base.$filename;
+
+        if( file_exists($fullPath) )
+        {
+            $this->ESession->setResultDataDownload($fullPath, $this);
+            $results = array(
+                'status' => 'success'
+            );
+        } else {
+            $results = array(
+                'status' => 'file_not_found'
+            );
+        }
+
+        echo json_encode($results);
+        exit;
+    }
+
+    function download_all_result() {
+        $fullPath = $this->ESession->getResultDataDownload($this);
+        $filename = substr($fullPath, strlen("/home/robo/var/bulk_history/") - strlen($fullPath));
+        $filesize = filesize($fullPath);
+        header("Pragma: public");
+        header("Expires: 0");
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header("Content-Type: application/zip");
+        header("Content-Disposition: attachment; filename=\"".$filename."\";" );
+        header("Content-Transfer-Encoding: binary");
+        header("Content-Length: ".$filesize);
+        echo file_get_contents($fullPath);
+        $this->Session->delete('result_data_download');
+        exit;
+    }
 	function get_answer_pos($schedule_id) {
 		$arr_answer_pos = array();
 		$current_pos = 1;
